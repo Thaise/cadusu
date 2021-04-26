@@ -22,6 +22,5 @@ Os endereços para acessar a aplicação serão os seguintes:
 
 O usuário padrão para acesso à API de usuarios (Basic Auth):
 
-Usuário: usuariopf
-Senha: usu%45$RA
+usuário: usuariopf / senha: usu%45$RA
 
