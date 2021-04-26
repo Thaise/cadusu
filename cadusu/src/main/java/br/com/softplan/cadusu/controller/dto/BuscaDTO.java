@@ -4,7 +4,7 @@ import java.util.List;
 
 import io.swagger.annotations.ApiModelProperty;
 
-public class BuscaDTO<T> {
+public class BuscaDTO {
 
 	@ApiModelProperty(value = "Página atual")
 	private Integer pagina;
@@ -12,7 +12,7 @@ public class BuscaDTO<T> {
 	private Integer maxPorPagina;
 	@ApiModelProperty(value = "Total de itens")
 	private Long total;
-	private List<T> items;
+	private List<UsuarioBuscaDTO> items;
 	
 
 	public BuscaDTO(Long total) {
@@ -43,11 +43,11 @@ public class BuscaDTO<T> {
 		this.total = total;
 	}
 
-	public List<T> getItems() {
+	public List<UsuarioBuscaDTO> getItems() {
 		return items;
 	}
 
-	public void setItems(List<T> items) {
+	public void setItems(List<UsuarioBuscaDTO> items) {
 		this.items = items;
 	}
 

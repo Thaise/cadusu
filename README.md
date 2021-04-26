@@ -13,7 +13,6 @@
 
 * Execute os seguintes comandos no diretório raiz deste projeto:
 <pre>sudo docker-compose up --build -d</pre>
-<pre>docker-compose up -d</pre>
 
 Os endereços para acessar a aplicação serão os seguintes:
 

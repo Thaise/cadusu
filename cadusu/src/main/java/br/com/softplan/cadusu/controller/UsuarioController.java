@@ -92,14 +92,14 @@ public class UsuarioController {
 
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@ApiOperation(value = "Busca todos os usuários presentes na base de dados", response = BuscaDTO.class, produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody ResponseEntity<BuscaDTO<UsuarioBuscaDTO>> buscaUsuarios(
+	public @ResponseBody ResponseEntity<BuscaDTO> buscaUsuarios(
 			@ApiParam(required = false, name = "Número da página (primeira página é 0)", example = "0") @RequestParam @PositiveOrZero Integer pagina,
 			@ApiParam(required = false, name = "Quantidade máxima de itens por página", example = "20") @RequestParam @Positive @Max(value = 100l) Integer max,
 			@ApiParam(required = false, name = "Nome") @RequestParam(required = false) String nome,
 			@ApiParam(required = false, name = "E-mail") @RequestParam(required = false) String email,
 			@ApiParam(required = false, name = "CPF") @RequestParam(required = false) String cpf) {
 
-		BuscaDTO<UsuarioBuscaDTO> usuarios = service.buscaUsuarios(pagina, max, new Filtro(nome, cpf, email));
+		BuscaDTO usuarios = service.buscaUsuarios(pagina, max, new Filtro(nome, cpf, email));
 
 		if (usuarios.getTotal() > 0) {
 			return ResponseEntity.ok(usuarios);

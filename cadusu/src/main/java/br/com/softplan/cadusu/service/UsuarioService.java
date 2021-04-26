@@ -51,8 +51,8 @@ public class UsuarioService {
 		repository.delete(buscaPor(id));
 	}
 
-	public BuscaDTO<UsuarioBuscaDTO> buscaUsuarios(Integer pagina, Integer max, Filtro filtro) {
-		BuscaDTO<UsuarioBuscaDTO> busca = new BuscaDTO<UsuarioBuscaDTO>(repository.getTotal(filtro));
+	public BuscaDTO buscaUsuarios(Integer pagina, Integer max, Filtro filtro) {
+		BuscaDTO busca = new BuscaDTO(repository.getTotal(filtro));
 		busca.setMaxPorPagina(max);
 		busca.setPagina(pagina);
 		

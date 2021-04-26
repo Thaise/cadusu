@@ -211,7 +211,7 @@ public class UsuarioControllerTest {
 
 	@Test
 	public void buscaUsuariosTest() throws Exception {
-		BuscaDTO<UsuarioBuscaDTO> dto = new BuscaDTO<UsuarioBuscaDTO>(1l);
+		BuscaDTO dto = new BuscaDTO(1l);
 		UsuarioBuscaDTO usuario = getUsuarioDTOCompleto();
 		dto.setItems(new ArrayList<UsuarioBuscaDTO>(Arrays.asList(usuario)));
 		dto.setMaxPorPagina(20);
