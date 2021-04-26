@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  cadusufront:
+    build: './cadusufront'
+    ports: 
+      - "8080:8080"
+    depends_on:
+      - cadusuapi
+  cadusuapi:
+    build: './cadusu'
+    ports: 
+      - "8081:8081"
