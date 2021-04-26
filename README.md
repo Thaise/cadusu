@@ -15,10 +15,14 @@
 <pre>sudo docker-compose up --build -d</pre>
 <pre>docker-compose up -d</pre>
 
-* Os endereços para acesso às telas (frontend) e da API (backend) serão os seguintes:
+Os endereços para acessar a aplicação serão os seguintes:
 
-<p>
-API: http://localhost:8081/swagger-ui<br/>
-Front: http://localhost
-</p>
+* API: http://localhost:8081
+* Swagger: http://localhost:8081/swagger-ui
+* Front: http://localhost:8080
+
+O usuário padrão para acesso à API de usuarios (Basic Auth):
+
+Usuário: usuariopf
+Senha: usu%45$RA
 
