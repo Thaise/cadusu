@@ -1,0 +1,78 @@
+<mat-card>
+  <mat-card-title>Usuário</mat-card-title>
+  <form #usuarioForm>
+    <p>* Campo obrigatório</p>
+    <mat-form-field appearance="fill">
+      <mat-label>CPF</mat-label>
+      <input
+        name="cpf"
+        required
+        matInput
+        [dropSpecialCharacters]="false"
+        mask="000.000.000-00"
+        [(ngModel)]="usuario.cpf"
+        placeholder="999.999.999-99"
+      />
+      <mat-hint align="end">Deve estar no formato 123.456.789-10</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input required name="nome" matInput [(ngModel)]="usuario.nome" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        name="email"
+        matInput
+        email="true"
+        [(ngModel)]="usuario.email"
+        placeholder="email@provedor.dominio"
+      />
+      <mat-hint align="end">Deve estar no formato email@provedor.dominio (Ex.: seunome@suaempresa.com.br)</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Data de nascimento</mat-label>
+      <input
+        name="dtNasc"
+        required
+        matInput
+        [dropSpecialCharacters]="false"
+        mask="00/00/0000"
+        [(ngModel)]="this.usuario.dtNasc"
+        placeholder="00/00/0000"
+      />
+      <mat-hint align="end">Deve estar no formato DD/MM/YYYY (dia/mês/ano - ex.: 01/05/1980)</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Sexo</mat-label>
+      <select matNativeControl [(ngModel)]="usuario.sexo" name="sexo">
+        <option value="" selected></option>
+        <option value="Feminino">Feminino</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Outro">Outro</option>
+      </select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Naturalidade</mat-label>
+      <input matInput name="naturalidade" [(ngModel)]="usuario.naturalidade" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Nacionalidade</mat-label>
+      <input
+        matInput
+        name="nacionalidade"
+        [(ngModel)]="usuario.nacionalidade"
+      />
+    </mat-form-field>
+    <a class="button" (click)="salva()" mat-button class="button"> Salvar </a>
+    <a
+      class="button"
+      mat-button
+      class="button"
+      style="background-color: #cccc; color: black"
+      routerLink="/"
+    >
+      Cancelar
+    </a>
+  </form>
+</mat-card>

@@ -1,0 +1,102 @@
+<mat-card>
+  <mat-card-title>Usuários cadastrados</mat-card-title>
+  <div class="filtro">
+    <form>
+      <div class="form-container">
+        <label>CPF</label>
+        <input
+          name="cpf"
+          [dropSpecialCharacters]="false"
+          matInput
+          mask="000.000.000-00"
+          [(ngModel)]="filtro.cpf"
+          placeholder="999.999.999-99"
+          />
+      </div>
+      <div class="form-container">
+        <label>Nome</label>
+        <input name="nome" matInput [(ngModel)]="filtro.nome" />
+      </div>
+      <div class="form-container">
+        <label>Email</label>
+        <input
+          name="email"
+          matInput
+          [(ngModel)]="filtro.email"
+          placeholder="email@provedor.com"
+          />
+      </div>
+      <div class="form-container">
+        <a class="button" (click)="executaFiltro()" mat-button class="button">
+          Buscar</a>
+      </div>
+    </form>
+  </div>
+  <table mat-table [dataSource]="usuarios" class="mat-elevation-z8">
+    <ng-container matColumnDef="cpf">
+      <th mat-header-cell *matHeaderCellDef> CPF </th>
+      <td mat-cell *matCellDef="let usuario"> {{usuario.cpf}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let usuario"> {{usuario.nome}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let usuario"> {{usuario.email}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="sexo">
+      <th mat-header-cell *matHeaderCellDef> Sexo </th>
+      <td mat-cell *matCellDef="let usuario"> {{usuario.sexo}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="naturalidade">
+      <th mat-header-cell *matHeaderCellDef> Naturalidade </th>
+      <td mat-cell *matCellDef="let usuario"> {{usuario.naturalidade}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nacionalidade">
+      <th mat-header-cell *matHeaderCellDef> Nacionalidade </th>
+      <td mat-cell *matCellDef="let usuario"> {{usuario.nacionalidade}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dtNasc">
+      <th mat-header-cell *matHeaderCellDef> Data de nascimento </th>
+      <td mat-cell *matCellDef="let usuario"> {{usuario.dtNasc}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="dtCadastro">
+      <th mat-header-cell *matHeaderCellDef> Criação </th>
+      <td mat-cell *matCellDef="let usuario"> {{usuario.dtCadastro}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="dtAtualizacao">
+      <th mat-header-cell *matHeaderCellDef> Última atualizacao </th>
+      <td mat-cell *matCellDef="let usuario"> {{usuario.dtAtualizacao}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="editar">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let usuario"> <a mat-button
+          routerLink="/criar-usuario/{{usuario.id}}">Editar</a> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="excluir">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let usuario"> <a mat-button
+          (click)="remove(usuario.id)">Excluir</a> </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+  <mat-paginator #paginacao [length]="total" [pageSize]="max"
+    [pageIndex]="pagina" [pageSizeOptions]="[5, 10, 20]"
+    (page)="executaPaginacao($event)" showFirstLastButtons></mat-paginator>
+</mat-card>

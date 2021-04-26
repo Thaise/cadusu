@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.header a{
+    text-decoration: none;
+}
+
+.header .nav{
+    margin-left: 20px;
+}
+
+
+.header .nav a{
+    margin-left: 10px;
+}

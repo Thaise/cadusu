@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.content{
+    margin: 20px auto;
+    width: 80%;
+    height: 100%;
+}
+
+button, .button{
+    background-color: black;
+    color: #ffff;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 10px !important;
+}
+
+.mat-simple-snackbar-action {
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.mat-card{
+    display: inherit;
+}

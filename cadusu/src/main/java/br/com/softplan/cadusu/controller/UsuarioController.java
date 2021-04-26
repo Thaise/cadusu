@@ -109,7 +109,7 @@ public class UsuarioController {
 	}
 
 	@GetMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-	@ApiOperation(value = "Busca um usuário, retorna 404 se ele não existir", response = UsuarioDTO.class, produces = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(value = "Busca um usuário, retorna 404 se ele não existir", response = UsuarioBuscaDTO.class, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<UsuarioBuscaDTO> getPorId(
 			@ApiParam(name = "Id do usuário que deve ser retornado", example = "123") @PathVariable Long id) {
 		return ResponseEntity.ok(service.getUnico(id));
