@@ -2,16 +2,18 @@
 
 <p>Aplicação web para cadastro de usuários desenvolvido para o desafio técnico da Softplan</p>
 
+## Instruções para execução
 
-* Para buildar e rodar os testes da API:
+### 1 - Para buildar e rodar os testes do backend:
 <pre>cd cadusu</pre>
 <pre>mvn clean install</pre>
 
-## Instruções para execução:
+Obs.: Caso queira apenas gerar o jar para o próximo passo, execute:
+<pre>mvn package -DskipTests</pre>
 
-* Instale o docker engine e docker compose 
+### 2 - Instale o docker engine e docker compose 
 
-* Execute os seguintes comandos no diretório raiz deste projeto:
+### 3 - Execute o seguinte comando no diretório raiz deste projeto:
 <pre>sudo docker-compose up --build -d</pre>
 
 Os endereços para acessar a aplicação serão os seguintes:

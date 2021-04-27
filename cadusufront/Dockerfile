@@ -1,4 +1,4 @@
-FROM node:10.24-stretch AS builder
+FROM node:14-stretch AS builder
 
 WORKDIR /opt/web
 COPY package.json package-lock.json ./
