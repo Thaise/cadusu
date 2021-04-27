@@ -4,16 +4,9 @@
 
 ## Instruções para execução
 
-### 1 - Para buildar e rodar os testes do backend:
-<pre>cd cadusu</pre>
-<pre>mvn clean install</pre>
+### 1 - Instale o docker engine e docker compose 
 
-Obs.: Caso queira apenas gerar o jar para o próximo passo, execute:
-<pre>mvn package -DskipTests</pre>
-
-### 2 - Instale o docker engine e docker compose 
-
-### 3 - Execute o seguinte comando no diretório raiz deste projeto:
+### 2 - Execute o seguinte comando no diretório raiz deste projeto:
 <pre>sudo docker-compose up --build -d</pre>
 
 Os endereços para acessar a aplicação serão os seguintes:
@@ -25,4 +18,9 @@ Os endereços para acessar a aplicação serão os seguintes:
 O usuário padrão para acesso à API de usuarios (Basic Auth):
 
 usuário: usuariopf / senha: usu%45$RA
+
+* Para buildar e rodar os testes do backend em ambiente local (é necessário ter jdk 8 e Maven 3+ instalado):
+
+<pre>cd cadusu</pre>
+<pre>mvn clean install</pre>
 
