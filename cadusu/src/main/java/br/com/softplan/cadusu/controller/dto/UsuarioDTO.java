@@ -17,7 +17,7 @@ import br.com.softplan.cadusu.validator.CPF;
 import br.com.softplan.cadusu.validator.DataNascimento;
 import io.swagger.annotations.ApiModelProperty;
 
-public class UsuarioDTO {
+public class UsuarioDTO{
 
 	@ApiModelProperty(value = "CPF", example = "999.999.999-99")
 	@NotBlank(message = "CPF é obrigatório")

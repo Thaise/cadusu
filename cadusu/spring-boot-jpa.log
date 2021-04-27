@@ -1,6 +1,50 @@
-/*C22*/SET SCHEMA PUBLIC
+/*C132*/SET SCHEMA PUBLIC
 drop table if exists usuario CASCADE 
 drop sequence hibernate_sequence if exists
 create sequence hibernate_sequence start with 1 increment by 1
 create table usuario (id bigint not null, cpf varchar(255), dt_atualizacao timestamp, dt_criacao timestamp, dt_nasc date, email varchar(255), nacionalidade varchar(255), naturalidade varchar(255), nome varchar(255) not null, sexo varchar(255), primary key (id))
 alter table usuario add constraint UK_692bsnqxa8m9fmx7m1yc6hsui unique (cpf)
+/*C142*/SET SCHEMA PUBLIC
+drop table if exists usuario CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table usuario (id bigint not null, cpf varchar(255), dt_atualizacao timestamp, dt_criacao timestamp, dt_nasc date, email varchar(255), nacionalidade varchar(255), naturalidade varchar(255), nome varchar(255) not null, sexo varchar(255), primary key (id))
+alter table usuario add constraint UK_692bsnqxa8m9fmx7m1yc6hsui unique (cpf)
+DISCONNECT
+/*C132*/DISCONNECT
+/*C143*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C133*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C144*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C134*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C145*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C135*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C146*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C136*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C147*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C137*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C148*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C138*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C139*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C149*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C140*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C150*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C141*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C151*/SET SCHEMA PUBLIC
+DISCONNECT
